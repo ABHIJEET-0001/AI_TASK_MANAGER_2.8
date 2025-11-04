@@ -6,17 +6,17 @@ import matplotlib.pyplot as plt
 import os
 from datetime import date
 import streamlit.components.v1 as components
-import google.generativeai as genai
+# import google.generativeai as genai
 import textwrap
 import json
 
 
 # Set page configuration
 # 🔐 Gemini AI API Setup# 🔐 Gemini AI API Setup
-api_key = st.secrets["GEMINI_API_KEY"]
-genai.configure(api_key=api_key)
+# api_key = st.secrets["GEMINI_API_KEY"]
+# genai.configure(api_key=api_key)
 
-model = genai.GenerativeModel("models/gemini-1.5-flash-8b")
+# model = genai.GenerativeModel("models/gemini-1.5-flash-8b")
 # Import necessary libraries
 
 # Set up Streamlit page configuration
