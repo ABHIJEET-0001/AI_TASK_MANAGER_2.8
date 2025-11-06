@@ -1,29 +1,3 @@
-<style>
-  body { background:#0d1117; color:#c9d1d9; }
-  h1,h2,h3,h4 { color:#58a6ff; }
-  a { color:#58a6ff; }
-  code { background:#161b22; color:#f0f6fc; }
-  pre { background:#161b22; border:1px solid #30363d; }
-  blockquote { border-left:4px solid #58a6ff; background:#161b22; }
-  hr { border-color:#30363d; }
-
-  html { font-size: 16px !important; }          
-  body { font-size: 1rem; line-height: 1.7; }  
-  h1 { font-size: 2.2rem; }   
-  h2 { font-size: 1.8rem; }  
-  h3 { font-size: 1.5rem; }   
-  h4 { font-size: 1.3rem; }  
-
-  code, pre, kbd { font-size: 0.95rem; }
-
-  ul, ol { font-size: 1rem; }
-
-  .demo-btn {
-    font-size: 1.1rem !important;
-    padding: 10px 22px !important;
-  }
-</style>
-
 # 🧠 AI Task Manager 2.8
 
 A Streamlit-based AI Task Management dashboard that classifies, visualizes, and analyzes tasks using machine learning.
@@ -113,7 +87,6 @@ A Streamlit-based AI Task Management dashboard that classifies, visualizes, and 
 
   <li>🤝 <strong><code>CONTRIBUTING.md</code></strong> — Outlines contribution guidelines, branch naming conventions, and pull request submission steps.</li>
 
-  <
 
 
 ## 🚀 Run Locally
