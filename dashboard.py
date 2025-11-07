@@ -98,6 +98,10 @@ st.markdown("""
     background-color: #0052cc;
     transform: scale(1.05);
 }
+.confirm-row [data-testid="column"] {
+    padding-left: 4px;
+    padding-right: 4px;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -206,11 +210,33 @@ elif st.session_state["expanded"] == "delete":
             delete_options = [f"{row['Description']} (ID: {int(row['TaskID'])})" for _, row in tasks.iterrows()]
             selected = st.selectbox("🗂️ Choose Task", delete_options, key="delete")
             delete_btn = st.button("Delete Task")
+
+            # Initialize confirmation state
+            if "confirm_delete_id" not in st.session_state:
+                st.session_state["confirm_delete_id"] = None
+
+            # When Delete is clicked, ask for confirmation instead of immediate deletion
             if delete_btn:
-                task_id = int(selected.split("(ID:")[1].replace(")", "").strip())
-                tasks = tasks[tasks["TaskID"] != task_id]
-                save_tasks(tasks)
-                st.success("✅ Task deleted!")
+                st.session_state["confirm_delete_id"] = int(selected.split("(ID:")[1].replace(")", "").strip())
+
+            # Show confirmation UI when a deletion is pending
+            if st.session_state.get("confirm_delete_id") is not None:
+                pending_id = st.session_state["confirm_delete_id"]
+                st.warning(f"Are you sure you want to delete Task ID {pending_id}? This action cannot be undone.")
+                c1, c2 = st.columns(2, gap="small")
+                with c1:
+                    confirm = st.button("✅ Confirm Delete", key="confirm_delete")
+                with c2:
+                    cancel = st.button("❌ Cancel", key="cancel_delete")
+
+                if confirm:
+                    tasks = tasks[tasks["TaskID"] != pending_id]
+                    save_tasks(tasks)
+                    st.session_state["confirm_delete_id"] = None
+                    st.success("✅ Task deleted!")
+                elif cancel:
+                    st.session_state["confirm_delete_id"] = None
+                    st.info("Deletion cancelled.")
         else:
             st.info("ℹ️ No tasks to delete.")
 
