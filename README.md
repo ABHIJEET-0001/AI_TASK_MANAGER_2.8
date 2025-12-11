@@ -1,3 +1,36 @@
+# 📑 **Table of Contents**
+
+* [🧠 AI Task Manager 2.8](#-ai-task-manager-28)
+* [✨ Key Highlights](#-key-highlights)
+* [🛠️ Tech Stack](#️-tech-stack)
+* [📁 Project Structure](#-project-structure)
+* [🚀 Run Locally](#-run-locally)
+
+  * [Clone the Repository](#1️⃣-clone-the-repository)
+  * [Create and Activate Virtual Environment](#2️⃣-create-and-activate-a-virtual-environment)
+  * [Install Dependencies](#3️⃣-install-dependencies)
+  * [Verify Data Files](#4️⃣-verify-data-files)
+  * [Launch the Application](#5️⃣-launch-the-application)
+  * [Troubleshooting Tips](#🧰-troubleshooting-tips)
+* [📸 Dashboard Preview](#-dashboard-preview)
+* [📊 Dashboard Modules](#-dashboard-modules)
+* [🧩 Data Format](#-data-format)
+
+  * [`user_data.csv`](#-userdatacsv--user-performance--behavior-metrics)
+  * [`tasks_cleaned.csv`](#-taskscleanedcsv--task-level-details)
+  * [`model_predictions.csv`](#-modelpredictionscsv--model-performance--accuracy-logs)
+* [🚧 Future Enhancements](#-future-enhancements)
+* [🐛 Troubleshooting & Common Issues](#-troubleshooting--common-issues)
+* [🤝 Contributing](#-contributing)
+
+  * [Contribution Workflow](#🧭-step-by-step-contribution-workflow)
+  * [Best Practices](#📋-contribution-best-practices)
+* [🎓 Ideal For](#-ideal-for)
+* [🙌 Acknowledgements](#-acknowledgements)
+* [📜 License](#-license)
+
+---
+
 # 🧠 AI Task Manager 2.8
 
 A Streamlit-based AI Task Management dashboard that classifies, visualizes, and analyzes tasks using machine learning.
