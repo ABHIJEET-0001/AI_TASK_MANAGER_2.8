@@ -136,6 +136,15 @@ def load_tasks():
 def save_tasks(df):
     df.to_csv(task_file, index=False)
 
+def priority_badge(priority: str) -> str:
+    if priority == "High":
+        return "🔴 High"
+    elif priority == "Medium":
+        return "🟡 Medium"
+    elif priority == "Low":
+        return "🟢 Low"
+    return priority
+
 # Session state to control expanders
 if "expanded" not in st.session_state:
     st.session_state["expanded"] = None
@@ -322,19 +331,35 @@ if selected_page == "📋 Tasks":
 
                 st.markdown("<div class='task-table-container'>", unsafe_allow_html=True)
                 table_for_edit = tasks_sorted.copy()
+
+                # Visual-only priority column
+                table_for_edit["Priority (Visual)"] = table_for_edit["Priority"].apply(priority_badge)
+
                 table_for_edit["Select"] = False
 
                 edited_view = st.data_editor(
                     table_for_edit,
                     use_container_width=True,
                     height=400,
-                    disabled=["TaskID", "Description", "Deadline", "AssignedTo", "Priority", "Status"],
+                    disabled=[
+                        "TaskID",
+                        "Description",
+                        "Deadline",
+                        "AssignedTo",
+                        "Priority",
+                        "Priority (Visual)",
+                        "Status",
+                    ],
                     column_config={
+                        "Priority (Visual)": st.column_config.TextColumn(
+                            "Priority",
+                            help="Task priority (visual indicator)",
+                        ),
                         "Select": st.column_config.CheckboxColumn(
                             "Select",
                             help="Tick to include this task in bulk actions",
                             default=False,
-                        )
+                        ),
                     },
                     hide_index=True,
                 )
