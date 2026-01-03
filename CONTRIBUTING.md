@@ -1,112 +1,218 @@
 # 🤝 Contributing to AI Task Manager 2.8
 
-Welcome! 👋 Whether you’re a beginner, student, or experienced developer, your contributions are truly valued. We are building an AI-driven future for task management and media, and we’re excited to have you on board!
+Welcome! 👋
+We’re excited that you’re interested in contributing to **AI Task Manager 2.8** — a **Streamlit-based intelligent task management dashboard** that leverages **Machine Learning and NLP** to classify, prioritize, and visualize tasks.
+
+Whether you’re a **beginner**, **student**, or **experienced developer**, your ideas and contributions are truly valued! 💡
 
 ---
 
-## 🛠 Development Standards
+## 🧠 What You Can Contribute
 
-To maintain code quality and project integrity, please adhere to the following technical requirements:
+We welcome improvements in **any area** of the project, including:
 
-* **Framework:** Built using **React 19** and **Streamlit**.
-* **Styling:** Use **Tailwind CSS** for all new React components.
-* **Naming Conventions:**
-* `PascalCase` for React components (e.g., `PostCard.jsx`).
-* `camelCase` for variables and functions.
-
-
-* **Linting:** You **must** run `npm run lint` and fix all warnings before committing.
-* **Code Quality:** Follow Python (PEP8) for backend scripts. Write clean, modular, and documented code.
+* 🚀 **New features or enhancements** — Intelligent task automation, new ML models, UI/UX improvements
+* 🐛 **Bug fixes** — Identify and resolve issues in logic, UI, or performance
+* 📖 **Documentation updates** — Improve setup instructions, usage guides, or workflows
+* ✅ **Testing and validation** — Add or improve test cases for reliability
+* 🌟 **Suggestions and ideas** — Propose ways to make the system smarter and more user-friendly
 
 ---
 
-## 🚀 Getting Started
+## 🚦 Workflow (Mandatory)
 
-### 1️⃣ Fork the Repository
+### 1️⃣ Fork & Clone
 
-Click the **Fork** button at the top-right corner of this page to create your copy of the repo.
-
-### 2️⃣ Clone Your Fork
+* Fork the repository
+* Clone it to your local machine:
 
 ```bash
 git clone https://github.com/your-username/AI_TASK_MANAGER_2.8.git
 cd AI_TASK_MANAGER_2.8
-
 ```
 
-### 3️⃣ Create a New Branch
+---
+
+### 2️⃣ Branching
+
+Create a **descriptive feature branch**:
 
 ```bash
 git checkout -b feature/your-feature-name
-
 ```
+
+---
+
+### 3️⃣ Environment Setup
+
+Before starting development:
+
+```bash
+cp .env.example .env
+```
+
+Configure environment variables as needed.
+
+---
 
 ### 4️⃣ Make Your Changes
 
-* **Environment:** Copy `.env.example` to `.env` before starting.
-* Write clean, modular, and documented code.
-* Add docstrings and comments where necessary.
-* Keep your code consistent with the existing structure.
+Please ensure:
+
+* Clean, modular, and readable code
+* Follow **Python (PEP8)** and **Streamlit best practices**
+* Add **docstrings and comments** where necessary
+* Maintain consistency with the existing project structure
+
+---
 
 ### 5️⃣ Test Your Changes
 
-* **For Streamlit:** Run `streamlit run app.py` locally.
-* **For React:** Run `npm run dev` and `npm run lint`.
-* Verify that your changes don’t break existing functionality.
+Run the application locally:
 
-### 6️⃣ Commit and Push
+```bash
+streamlit run app.py
+```
 
-We follow the `type(scope): subject` format for commit messages:
+Verify:
+
+* Your feature works correctly
+* No existing functionality is broken
+* No errors, warnings, or failed builds
+
+---
+
+### 6️⃣ Commit & Push
+
+#### 📝 Commit Message Format (Required)
+
+We strictly follow:
+
+```
+type(scope): subject
+```
+
+**Allowed types:**
 
 * `feat:` A new feature
 * `fix:` A bug fix
 * `docs:` Documentation changes
+* `refactor:` Code changes without behavior changes
+
+**Example:**
 
 ```bash
-git add .
-git commit -m "feat: added intelligent task sorting"
-git push origin feature/your-feature-name
-
+git commit -m "feat(ui): add priority filter to dashboard"
 ```
 
-### 7️⃣ Submit a Pull Request
+Push your branch:
 
-* Go to your forked repo and click **"Compare & pull request"**.
-* **Mandatory:** You **MUST** provide screenshots or GIFs of the new changes in your PR description.
-* Wait for review and feedback from maintainers.
-
----
-
-## 🚦 Workflow & Rules
-
-* **Respect Assignments:** Wait for an issue to be **officially assigned** to you before starting work. Unsolicited PRs for unassigned issues will be closed.
-* **Issue Limit:** Maximum of **3 issues** assigned at one time.
-* **Visual Requirements:** You **MUST** provide screenshots of the "Area to be Changed" when opening a new Issue.
+```bash
+git push origin feature/your-feature-name
+```
 
 ---
 
-## ⏱️ Time Constraints & Disqualification
+### 7️⃣ Pull Request Submission
 
-* **Deadline:** Tasks should ideally be completed within **30 minutes to 48 hours**.
-* **Grace Period:** If no progress is shown after **72 hours**, the issue will be unassigned.
-* **Stale PRs:** Failure to respond to requested changes within **24 hours** may result in the PR being closed.
-* **Immediate Disqualification:** Submitting a PR that fails the build, ignores linting rules, lacks mandatory screenshots, or duplicates someone else's work.
+* Open a PR **against the `main` branch**
+* Use the **required PR template**
+* Clearly describe:
+
+  * What you changed
+  * Why the change was needed
+  * How it works
+* Include **screenshots or GIFs (MANDATORY)**
+
+---
+
+## 📸 Visual Requirements (Strictly Enforced)
+
+### ✅ For Pull Requests
+
+* **Screenshots or GIFs of the new changes are REQUIRED**
+* PRs without visuals will be **rejected immediately**
+
+### ✅ For Issues
+
+* **Screenshots of the current state** (before changes) are REQUIRED when opening an issue
 
 ---
 
 ## 🚫 Community Guidelines & Morale
 
-* **Positive Environment:** No negative comments that decrease morale or discourage other contributors.
-* **Code of Conduct:** Please be respectful and inclusive. Harassment or discrimination of any kind will not be tolerated.
+To maintain a healthy open-source environment:
+
+* ❌ **No negative or discouraging comments**
+* 🤝 **Respect issue assignment**
+
+  * Do NOT start work unless the issue is officially assigned to you
+  * Unsolicited PRs for unassigned issues will be **closed**
+* 🧠 Be professional, respectful, and collaborative at all times
+
+---
+
+## ⏱️ Time Constraints & Disqualification Rules
+
+### ⏳ Assignment Rules
+
+* Work must begin **immediately after assignment**
+* Maximum **3 issues per contributor per day**
+
+  * More only after completing assigned issues
+
+---
+
+### ⏰ Deadlines
+
+* **Ideal completion time:** 30 minutes – 48 hours
+* **Maximum grace period:** 72 hours
+
+  * No progress → issue will be **unassigned**
+
+---
+
+### ❌ Disqualification Conditions
+
+A contributor may be disqualified if:
+
+* PR fails build or ignores linting rules
+* Mandatory screenshots are missing
+* Duplicate PR submitted for an already assigned issue
+* No response to requested PR changes within **24 hours**
+* Repeated violations may lead to **warnings or bans**
+
+---
+
+## 🧪 Code of Conduct
+
+Please be respectful and inclusive in all interactions.
+Harassment, discrimination, or toxic behavior will **not be tolerated**.
+
+📄 Make sure to read the **Code of Conduct** before contributing.
+
+---
+
+## 💡 Tips for First-Time Contributors
+
+* 🌱 Start with issues labeled **`good first issue`**
+* 💬 Ask questions via **GitHub Issues or Discussions**
+* 🤝 Don’t worry about perfection — maintainers will guide you
 
 ---
 
 ## 📬 Need Help?
 
-If you get stuck or have questions:
+If you’re stuck or unsure:
 
-* Open a **GitHub Issue** describing your problem.
-* Tag a **maintainer** for assistance.
-* **Tips:** Start with issues labeled `good first issue`. Don’t worry about perfection—maintainers will guide you!
+* Open a **GitHub Issue** describing the problem
+* Tag a **maintainer** for assistance
 
-**Thank you for helping us improve! Together, we’re building a smarter future. 🚀**
+We’re happy to help you contribute successfully! 💬
+
+---
+
+## 🌟 Thank You for Contributing!
+
+Your contributions make **AI Task Manager 2.8** better for everyone 🚀
+Together, we’re building an **AI-driven future of smarter task management** 💼🤖
