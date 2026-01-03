@@ -1,101 +1,218 @@
 # 🤝 Contributing to AI Task Manager 2.8
 
-Welcome! 👋  
-We’re excited that you’re interested in contributing to **AI Task Manager 2.8** — a Streamlit-based intelligent task management dashboard that leverages **Machine Learning and NLP** to classify, prioritize, and visualize tasks.
+Welcome! 👋
+We’re excited that you’re interested in contributing to **AI Task Manager 2.8** — a **Streamlit-based intelligent task management dashboard** that leverages **Machine Learning and NLP** to classify, prioritize, and visualize tasks.
 
-Whether you’re a **beginner**, **student**, or **experienced developer**, your ideas and contributions are truly valued! 💡  
+Whether you’re a **beginner**, **student**, or **experienced developer**, your ideas and contributions are truly valued! 💡
 
 ---
 
 ## 🧠 What You Can Contribute
 
-We welcome improvements in any area of the project, including:
+We welcome improvements in **any area** of the project, including:
 
-🚀 **New features or enhancements** — Add intelligent task automation, new ML models, or UI components.  
-🐛 **Bug fixes** — Identify and resolve issues in code or UI.  
-📖 **Documentation updates** — Improve setup instructions or clarify workflow.  
-✅ **Testing and validation** — Add or improve test cases for better reliability.  
-🌟 **Suggestions and ideas** — Propose ways to make the system smarter and more user-friendly.  
+* 🚀 **New features or enhancements** — Intelligent task automation, new ML models, UI/UX improvements
+* 🐛 **Bug fixes** — Identify and resolve issues in logic, UI, or performance
+* 📖 **Documentation updates** — Improve setup instructions, usage guides, or workflows
+* ✅ **Testing and validation** — Add or improve test cases for reliability
+* 🌟 **Suggestions and ideas** — Propose ways to make the system smarter and more user-friendly
 
 ---
 
-## 🛠 Getting Started
+## 🚦 Workflow (Mandatory)
 
-### 1️⃣ Fork the Repository
-Click the **Fork** button at the top-right corner of this page to create your copy of the repo.
+### 1️⃣ Fork & Clone
 
-### 2️⃣ Clone Your Fork
+* Fork the repository
+* Clone it to your local machine:
+
 ```bash
 git clone https://github.com/your-username/AI_TASK_MANAGER_2.8.git
 cd AI_TASK_MANAGER_2.8
-
-#3️⃣ Create a New Branch
-git checkout -b your-feature-name
-
-#4️⃣ Make Your Changes
-
-Write clean, modular, and documented code.
-
-Follow Python (PEP8) and Streamlit coding standards.
-
-Add docstrings and comments where necessary.
-
-Keep your code consistent with the existing structure.
-
-#5️⃣ Test Your Changes
-
-Run the Streamlit app locally:
-
-streamlit run app.py
-
-
-Ensure your feature or fix works correctly.
-
-Verify that your changes don’t break existing functionality.
-
-#6️⃣ Commit and Push
-git add .
-git commit -m "Add: meaningful message about what you changed"
-git push origin your-feature-name
-
-#7️⃣ Submit a Pull Request
-
-Go to your forked repo on GitHub and click “Compare & pull request”.
-
-Describe your changes clearly, including screenshots if relevant.
-
-Wait for review and feedback from maintainers.
-
-💡 Tips for First-Time Contributors
-
-🌱 Start with issues labeled good first issue.
-💬 Ask questions by opening an issue or starting a discussion.
-🤝 Don’t worry about perfection—maintainers will guide you through the process.
-
-🧪 Code of Conduct
-
-Please be respectful and inclusive in all interactions.
-Harassment or discrimination of any kind will not be tolerated.
-Before contributing, please read the Code of Conduct
-.
-
-📬 Need Help?
-
-If you get stuck or have questions:
-
-Open a GitHub Issue describing your problem.
-
-Tag a maintainer for assistance.
-
-We’re happy to help you contribute successfully! 💬
-
-#🌟 Thank You for Helping Improve AI Task Manager 2.8!
-
-Your contributions make this project better for everyone 🚀
-Together, we’re building an AI-driven future of smarter task management. 💼🤖
-
+```
 
 ---
 
-Would you like me to now create a matching **`CODE_OF_CONDUCT.md`** file (GitHub-standard format, short and friendly)?  
-It’s usually paired with `CONTRIBUTING.md` to make your repo look complete and professional.
+### 2️⃣ Branching
+
+Create a **descriptive feature branch**:
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+---
+
+### 3️⃣ Environment Setup
+
+Before starting development:
+
+```bash
+cp .env.example .env
+```
+
+Configure environment variables as needed.
+
+---
+
+### 4️⃣ Make Your Changes
+
+Please ensure:
+
+* Clean, modular, and readable code
+* Follow **Python (PEP8)** and **Streamlit best practices**
+* Add **docstrings and comments** where necessary
+* Maintain consistency with the existing project structure
+
+---
+
+### 5️⃣ Test Your Changes
+
+Run the application locally:
+
+```bash
+streamlit run app.py
+```
+
+Verify:
+
+* Your feature works correctly
+* No existing functionality is broken
+* No errors, warnings, or failed builds
+
+---
+
+### 6️⃣ Commit & Push
+
+#### 📝 Commit Message Format (Required)
+
+We strictly follow:
+
+```
+type(scope): subject
+```
+
+**Allowed types:**
+
+* `feat:` A new feature
+* `fix:` A bug fix
+* `docs:` Documentation changes
+* `refactor:` Code changes without behavior changes
+
+**Example:**
+
+```bash
+git commit -m "feat(ui): add priority filter to dashboard"
+```
+
+Push your branch:
+
+```bash
+git push origin feature/your-feature-name
+```
+
+---
+
+### 7️⃣ Pull Request Submission
+
+* Open a PR **against the `main` branch**
+* Use the **required PR template**
+* Clearly describe:
+
+  * What you changed
+  * Why the change was needed
+  * How it works
+* Include **screenshots or GIFs (MANDATORY)**
+
+---
+
+## 📸 Visual Requirements (Strictly Enforced)
+
+### ✅ For Pull Requests
+
+* **Screenshots or GIFs of the new changes are REQUIRED**
+* PRs without visuals will be **rejected immediately**
+
+### ✅ For Issues
+
+* **Screenshots of the current state** (before changes) are REQUIRED when opening an issue
+
+---
+
+## 🚫 Community Guidelines & Morale
+
+To maintain a healthy open-source environment:
+
+* ❌ **No negative or discouraging comments**
+* 🤝 **Respect issue assignment**
+
+  * Do NOT start work unless the issue is officially assigned to you
+  * Unsolicited PRs for unassigned issues will be **closed**
+* 🧠 Be professional, respectful, and collaborative at all times
+
+---
+
+## ⏱️ Time Constraints & Disqualification Rules
+
+### ⏳ Assignment Rules
+
+* Work must begin **immediately after assignment**
+* Maximum **3 issues per contributor per day**
+
+  * More only after completing assigned issues
+
+---
+
+### ⏰ Deadlines
+
+* **Ideal completion time:** 30 minutes – 48 hours
+* **Maximum grace period:** 72 hours
+
+  * No progress → issue will be **unassigned**
+
+---
+
+### ❌ Disqualification Conditions
+
+A contributor may be disqualified if:
+
+* PR fails build or ignores linting rules
+* Mandatory screenshots are missing
+* Duplicate PR submitted for an already assigned issue
+* No response to requested PR changes within **24 hours**
+* Repeated violations may lead to **warnings or bans**
+
+---
+
+## 🧪 Code of Conduct
+
+Please be respectful and inclusive in all interactions.
+Harassment, discrimination, or toxic behavior will **not be tolerated**.
+
+📄 Make sure to read the **Code of Conduct** before contributing.
+
+---
+
+## 💡 Tips for First-Time Contributors
+
+* 🌱 Start with issues labeled **`good first issue`**
+* 💬 Ask questions via **GitHub Issues or Discussions**
+* 🤝 Don’t worry about perfection — maintainers will guide you
+
+---
+
+## 📬 Need Help?
+
+If you’re stuck or unsure:
+
+* Open a **GitHub Issue** describing the problem
+* Tag a **maintainer** for assistance
+
+We’re happy to help you contribute successfully! 💬
+
+---
+
+## 🌟 Thank You for Contributing!
+
+Your contributions make **AI Task Manager 2.8** better for everyone 🚀
+Together, we’re building an **AI-driven future of smarter task management** 💼🤖
